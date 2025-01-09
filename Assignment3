@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer with Flexible Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #d39c9c;
+      color: #391a1a;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin: 5px 0;
+    }
+
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #5449a1;
+    }
+
+    .footer-section ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-section {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <footer class="footer">
+    <div class="footer-section about-us">
+      <h3>About Us</h3>
+      <p>We are dedicated to providing the best services and creating value for our customers.</p>
+    </div>
+    <div class="footer-section quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-info">
+      <h3>Contact Info</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +91 8865432189</p>
+    </div>
+  </footer>
+</body>
+</html>
